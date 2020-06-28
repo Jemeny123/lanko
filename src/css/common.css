@@ -1,0 +1,134 @@
+@charset 'utf-8';
+/* 版心 */
+.nav-wrap,.show-wrap,.show2-wrap,.footer-wrap,.about-wrap,.bqxx-wrap,.con{
+    width: 1367px;
+    margin: 0 auto;
+}
+/* 公共样式 */
+/* nav */
+nav{
+    background: black;
+}
+.nav-wrap{
+    height: 60px;
+    font-size: 12px;
+    color: white;
+}
+.nav-wrap a:hover{
+    font-weight: bold;
+}
+.nav-wrap ul{
+    margin-left: 55px;
+}
+.nav-wrap ul li a{
+    display: inline-block;
+    color: white;
+    line-height: 60px;
+    padding: 0 25px;
+}
+.nav-wrap .nav-r a{
+    display: inline-block;
+    color: white;
+    line-height: 60px;
+    padding: 0 5px;
+}
+
+
+/* footer */
+footer{
+    min-height: 341px;
+    background: black;
+    text-align: center;
+    font-size: 12px;
+    line-height: 12px;
+}
+.footer-wrap h3{
+    font-size: 22px;
+    color: white;
+    line-height: 22px;
+    text-align: center;
+    padding: 44px 0 54px 0;
+}
+.footer-box{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-wrap .footer-box1{
+    width: 167px;
+}
+.footer-box1 .footer-imgbox{
+    display: flex;
+    justify-content: center;
+}
+.footer-box1 h4{
+    margin: 15px 0;
+    color: white;
+}
+.footer-box1 p{
+    color: #999999;
+    line-height: 18px;
+}
+
+
+/* about */
+.about{
+    background: black;
+    border-top: 1px solid #666;
+}
+.about-box{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 52px;
+    padding-left: 90px;
+}
+.about-box1{
+    width: 156px;
+}
+.about-box1 p a{
+    font-size: 12px;
+    margin-bottom: 14px;
+    line-height: 12px;
+    color: #666;
+}
+.about-box1 p:nth-of-type(1) a{
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-top: 56px;
+}
+.about-box1 .last-p2{
+    background: url(../images/about-1.jpg) no-repeat 0 6px;
+    padding-left: 21px;
+}
+.about-box1 .last-p3{
+    background: url(../images/about-2.jpg) no-repeat 0 6px;
+    padding-left: 21px;
+}
+
+
+/* bqxx */
+.bqxx-wrap{
+    height: 182px;
+    font-size: 10px;
+    text-align: center;
+}
+.bqxx-wrap p img{
+    /* display: inline-block; */
+    margin: 0 8px 0 20px;
+}
+.bqxx-wrap p:nth-of-type(1){
+    padding: 32px 0 24px 0;
+    color: black;
+}
+.bqxx-wrap p:nth-of-type(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bqxx-wrap p:nth-of-type(3),p:nth-of-type(4){
+    color: #999;
+}
+.bqxx-wrap p:nth-of-type(3){
+    margin: 32px 0 14px 0;
+}
