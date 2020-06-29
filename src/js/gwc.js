@@ -2,7 +2,7 @@
 function getShoppingCar(cb){
     //从cookie中获取用户名
     let vipName = getCookie('username')
-    $.get("getShoppingCart.php",{"vipName":vipName},function(datas){ 
+    $.get("./php/getShoppingCart.php",{"vipName":vipName},function(datas){ 
         let htmlStr =''
         datas.forEach(goods => {
             htmlStr +=`
@@ -104,7 +104,7 @@ function addEvent(){
 function updateCount(goodsId,goodsCount,cb){
     //从cookie中获取用户名
     let vipName = getCookie('username')
-    $.get("updateGoodsCount.php",{
+    $.get("./php/updateGoodsCount.php",{
         "vipName":vipName,
         "goodsId":goodsId,
         "goodsCount":goodsCount
@@ -122,7 +122,7 @@ function updateCount(goodsId,goodsCount,cb){
 function deleteGoods(goodsId,cb){
     //从cookie中获取用户名
     let vipName = getCookie('username')
-    $.get("deleteGoods.php",{
+    $.get("./php/deleteGoods.php",{
         "vipName":vipName,
         "goodsId":goodsId,
     },function(data){

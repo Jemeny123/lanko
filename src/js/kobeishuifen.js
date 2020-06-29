@@ -7,7 +7,7 @@ function getData(){
     let arr = str.split("="); //["?goodsId","01001"]   
     let goodsId =  arr[1];
 
-    $.get("getGoodsInfo.php","goodsId="+goodsId,function(data){
+    $.get("./php/getGoodsInfo.php","goodsId="+goodsId,function(data){
         showData(data);
     },"json");
 }
@@ -117,7 +117,7 @@ function addEvent(){
 
 //把指定商品 添加到购物车
 function addShoppingCar(vipName,goodsId){    
-    $.post("./addShoppingCart.php",{
+    $.post("./php/addShoppingCart.php",{
         "vipName":vipName,
         "goodsId":goodsId,
         "goodsCount":$("#count").val()

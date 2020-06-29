@@ -1,0 +1,36 @@
+{
+  "name": "lanko",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "file-uri-to-path": "^1.0.0",
+    "fsevents": "^1.2.13",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "gulp-babel": "^8.0.0",
+    "gulp-connect": "^5.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jemeny123/lanko.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jemeny123/lanko/issues"
+  },
+  "homepage": "https://github.com/Jemeny123/lanko#readme"
+}

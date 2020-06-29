@@ -1,6 +1,6 @@
 // 从后端获取所有的商品
 function getGoods(){
-    $.get("./getGoodsList.php?typeId=001",function(data){
+    $.get("./php/getGoodsList.php?typeId=001",function(data){
         showData(data);
     },"json");
 }

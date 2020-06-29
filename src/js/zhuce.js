@@ -187,7 +187,7 @@ $(function(){
         }
     })
 
-        // (4) 注册功能(获取参数并且发送网络请求， 在服务器端进行处理)
+    // (4) 注册功能(获取参数并且发送网络请求， 在服务器端进行处理)
     $("#ljzc").click(function() {
         /* [1] 检查表单验证是否全部都通过，如果有一个没有通过那么就return  */
         $("#sjh,#mm,#qrmm,#yzm").trigger("blur");
@@ -202,16 +202,12 @@ $(function(){
             alert("请阅读并同意用户的注册协议!!!");
             return;
         }
-        // let data = {
-        //     username: $.trim($("#usernameID").val()),
-        //     phone: $.trim($("#phoneID").val()),
-        //     password: md5($.trim($("#passwordA").val())).slice(0, 15)
-        // }
+
         $.post(
             "./php/addUser.php",
             {
                 "username":$("#sjh").val(),
-                "userpass":md5($.trim($("#passwordA").val())).slice(0, 15)
+                "userpass":md5($.trim($("#mm").val())).slice(0, 15)
             },
             function(data){
                 if(data=="success"){
