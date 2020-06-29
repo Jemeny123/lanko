@@ -1,0 +1,147 @@
+@charset 'utf-8';
+/* 公共部分 */
+h2{
+    font-size: 38px;
+    color: black;
+    line-height: 38px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* banner */
+#banner #box{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 545px;
+    padding-bottom: 30px;
+    margin-bottom: 70px;
+}
+#banner #box .slide{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 545px;
+}
+#banner img{
+    position: absolute;
+    left: 1903px;
+    width: 100%;
+    height: 100%;
+}
+#banner .slide>img:nth-child(1) {
+    left: 0px;
+}
+#box>ul {
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    z-index: 999;
+}
+
+#box>span {
+    position: absolute;
+    top: 229px;
+    display: inline-block;
+    width: 54px;
+    height: 108px;
+    /* background: rgba(999,999,999,0.8); */
+}
+
+#box>span:nth-of-type(1) {
+    left: 285px;
+}
+
+#box>span:nth-of-type(2) {
+    right: 285px;
+}
+
+/* show */
+.show-wrap{
+    min-height: 683px;
+}
+
+.show-wrap .show-box1{
+    width: 432px;
+    text-align: center;
+}
+.show-wrap .show-box1:nth-of-type(2){
+    margin: 0 34px;
+}
+.show-wrap .show-imgbox{
+    width: 432px;
+    height: 433px;
+}
+.show-wrap .show-imgbox img{
+    width: 100%;
+    height: 100%;
+}
+.show-wrap h3{
+    font-size: 26px;
+    color: black;
+    line-height: 26px;
+    margin: 19px 0 11px 0;
+    text-align: center;
+}
+.show-wrap h4{
+    font-size: 16px;
+    margin-bottom: 19px;
+    color: #666666;
+    line-height: 16px;
+}
+.show-wrap p{
+    font-size: 16px;
+    line-height: 16px;
+    color: black;
+    margin-bottom: 17px;
+    font-weight: bold;
+}
+.show-wrap .show-box1 span a{
+    display: inline-block;
+    width: 110px;
+    height: 38px;
+    background-color: black;
+    color: white;
+    line-height: 38px;
+}
+.show-wrap .show-box1 span a:hover{
+    background: #d61b52;
+}
+
+
+/* show2 */
+.show2-wrap{
+    margin-bottom: 33px;
+}
+.show2-wrap .show2-box h3{
+    font-size: 30px;
+    color: #000;
+    line-height: 30px;
+    margin: 32px 0 15px 0;
+}
+.show2-box h4{
+    font-size: 16px;
+    color: #666666;
+    line-height: 16px;
+}
+
+
+/* jiaru(加入) */
+.jiaru img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
