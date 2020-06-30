@@ -4,13 +4,21 @@ function getUserName(){
 
     if (username) {
         // 放到span里
-        $('#username1').html(username)
-    //     // 让div显示
-    //     $('welcome-box').style.display = 'block'
-    // }else{
-    //     // 2）、如果没有读取到了，那就显示login-box
-    //     $('login-box').style.display = 'block'
+        $('#username1').html(username + '欢迎你')
+        $('#zhuxiao').css({"display":"inline-block"})
+        $('#dl').css({"display":"none"})
+    }else{
+        $('#zhuxiao').css({"display":"none"})
+        $('#dl').css({"display":"inline-block"})
     }
+    // 2、给注销按钮绑定事件
+    $('#zhuxiao').click(function(){
+        // 1、删除cookie
+        removeCookie("username");
+        $('#username1').css({"display":"none"})
+        $('#zhuxiao').css({"display":"none"})
+        $('#dl').css({"display":"inline-block"})
+    })
 }
 
 
@@ -24,6 +32,7 @@ function getGoods(){
 
 // 显示商品
 function showData(data){
+    data.length = 3    
     let htmlStr1="";
     data.forEach(item => {
         htmlStr1 += `

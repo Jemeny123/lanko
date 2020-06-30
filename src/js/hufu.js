@@ -1,12 +1,13 @@
 // 从后端获取所有的商品
 function getGoods(){
-    $.get("./php/getGoodsList.php?typeId=001",function(data){
+    $.get("./php/getGoodsList.php",function(data){
         showData(data);
     },"json");
 }
 
 // 显示商品
 function showData(data){
+    data.length = 9
     let htmlStr="";
     data.forEach(item => {
         htmlStr += `

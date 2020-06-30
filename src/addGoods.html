@@ -5,7 +5,7 @@
 		<title></title>
 	</head>
 	<body>
-		<form action="saveGoods.php" method="post">
+		<form action="./php/saveGoods.php" method="post">
 		商品编号：<input type="text" name="goodsId" /><br/>
 		商品名称：<input type="text" name="goodsName" /><br/>
 		<!-- 商品类型：<input type="text" name="goodsType" /><br/> -->
@@ -35,7 +35,7 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script>
 $(function(){
-	$.get("getGoodsType.php",function(data){
+	$.get("./php/getGoodsType.php",function(data){
 		let objs = JSON.parse(data);
 		let htmlStr="";
 		objs.forEach(function(item){

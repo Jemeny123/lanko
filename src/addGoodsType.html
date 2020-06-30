@@ -5,7 +5,7 @@
 		<title></title>
 	</head>
 	<body>
-	<form action="saveGoodsType.php" method="post">
+	<form action="./php/saveGoodsType.php" method="post">
 		类型编号：<input id="typeId" type="text" name="typeId"  /><br/>
 		商品类型：<input type="text" name="goodsType" /><br/>
 		<input type="submit" value="保存" />
@@ -17,7 +17,7 @@
 <script>
 
 $(function(){
-    $.get('getMaxTypeId.php',function(data){
+    $.get('./php/getMaxTypeId.php',function(data){
         let maxTypeId = "001";
         if(data!=""){
             let str = "00"+(parseInt(data)+1);

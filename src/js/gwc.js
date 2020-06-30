@@ -151,5 +151,5 @@ function totalMoney(){
         }
     });
     $("#spjg").html(money);    
-    $("#zj").html(money);    
+    $("#zj").html(money);  
 }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/zhuce.css">
+    <style>
+        .btg{
+            border: 1px solid red;
+        }
+        #checkbox{
+            /* display: list-item; */
+            height: 13px;
+        }
+    </style>
+</head>
+<body>
+    <!-- nav -->
+    <nav>
+        <div class="nav-wrap">
+            <a href="#" class="logo-box float_left">
+                <img src="./images/logo_02.jpg" alt="">
+            </a>
+            <ul class="float_left">
+                <li class="float_left"><a href="./index.html">首页</a></li>
+                <li class="float_left">
+                    <a href="./hufu.html">护肤</a>
+                </li>
+                <li class="float_left"><a href="#">香水</a></li>
+                <li class="float_left"><a href="#">献礼母亲节</a></li>
+                <li class="float_left"><a href="#">菁纯奢宠家族</a></li>
+                <li class="float_left"><a href="./xiaoshobangdan.html">畅销榜单</a></li>
+                <li class="float_left"><a href="#">会员中心</a></li>
+            </ul>
+            <div class="nav-r float_right">
+                <a href="./denglu.html">登录</a>
+                <span>/</span>
+                <a href="./zhuce.html">注册</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="zhuce">
+        <h2>官网会员权益，购正装获积分，畅享明星兑礼。</h2>
+        <h1>登录<span>|</span><b>注册</b></h1>
+        <div class="zhuce-l float_left">
+            <div class="sjh-box">
+                <span>用户名*</span>
+                <input id="sjh" class="float_right" type="text">
+            </div>
+            <p id="p1"></p> 
+            <div class="mm-box">
+                <span>密码*</span>
+                <input id="mm" class="float_right" type="text">
+            </div>
+            <p id="p2"></p> 
+            <div class="qrmm-box">
+                <span>确认密码*</span>
+                <input id="qrmm" class="float_right" type="text">
+            </div>
+            <p></p> 
+            <input id="checkbox" name="checkbox" type="checkbox">
+            <span style="color: #000;">我同意依照本<a style="color: #000;" target="_blank" href="http://policy.lorealchina.com/termsofusewebsite">使用条款</a>和<a style="color: #000;" target="_blank" href="http://policy.lorealchina.com/privacypolicy">隐私政策</a>对我的个人信息进行收集和使用；我已阅读并确认被给予充分机会理解该<a style="color: #000;" target="_blank" href="http://policy.lorealchina.com/termsofusewebsite">使用条款</a>和<a style="color: #000;" target="_blank" href="http://policy.lorealchina.com/privacypolicy">隐私政策</a>的内容。</span>
+            <input id="ljzc" type="button" value="立即注册">
+            <h3 id="h3"></h3>
+        </div>
+        <div class="zhuce-r float_left">
+            <div class="yzm-box">
+                <span>验证码*</span>
+                <input id="yzm" type="text">
+                <canvas width="160" height="45" id="captcha"></canvas>
+                <!-- <div class="yzm-imgbox">
+                    <img src="./images/denglu_03.jpg" alt="">
+                </div>
+                <a href="#">换一张</a> -->
+            </div>
+            <p></p>
+            <!-- <div class="dxyzm-box">
+                <span>短信验证码*</span>
+                <input id="dxyzm" type="text">
+                <a href="#">发送</a>
+            </div>
+            <p></p> -->
+        </div>
+    </div>
+</body>
+</html>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/captcha.js"></script>
+<script src="./js/md5.js"></script>
+<script src="./js/zhuce.js"></script>

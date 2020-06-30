@@ -13,11 +13,11 @@ div{
 
 
 /* con布局 */
-.con{
+/* .con{
     height: 2973px;
-}
+} */
 .left{
-    width: 383px;
+    width: 300px;
     font-size: 12px;
     padding-left: 61px;
 }
@@ -49,13 +49,15 @@ div{
     margin: 49px 0 34px 0;
     font-size: 12px;
 }
-.right .right-box div:nth-of-type(2){
+/* .right .right-box div:nth-of-type(2){
     margin: 0 30px;
-}
+} */
 .right .right-box1{
     width: 290px;
+    height: 500px;
     text-align: center;
     font-size: 16px;
+    margin: 0 18px;
 }
 .right-box1 .right-imgbox{
     width: 290px;
