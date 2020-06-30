@@ -28,8 +28,7 @@ function showData(data){
                 <a href="#"><img src="${data.beiyong5}" alt=""></a>
             </div>
         </div>
-        <div class="gwc-c-imgbox float_left">
-            <img src="${data.goodsImg}" alt="">
+        <div class="gwc-c-imgbox float_left" style="background: url('${data.goodsImg}');background-size: 100% 100%;";>
         </div>
         <div class="gwc-r float_left">
             <p>${data.beiyong2}</p>
@@ -83,13 +82,15 @@ function showData(data){
         <img src="${data.beiyong13}" alt="">
     `;
     $("#imgbox").html(htmlStr2);
+
     addEvent()
-    let oBox = document.getElementsByClassName('gwc-c-imgbox')
+    let oBox = document.getElementsByClassName('gwc-c-imgbox')[0]
+    let oImgBox = document.getElementsByClassName('gwc-l')[0]
     console.log(oBox);
-    let m1 = new Mirror(oBox,{
+    console.log(oImgBox);
+    let m1 = new Mirror(oBox,oImgBox,{
         width:100,
-        img:'../images/jinghua/show1-1.jpg',
-        imgs:["../images/jinghua/show1-1.jpg","../images/jinghua/show1-2.jpg","img/img3.jpg"]
+        img:`${data.goodsImg}`
     });
 }
 
@@ -137,11 +138,12 @@ function addShoppingCar(vipName,goodsId){
     });
 }
 
-
 // 类：放大镜
-function Mirror(oBox, obj) {
+
+function Mirror(oBox,oImgBox, obj) {
     // DOM相关的属性：
     this.oBox = oBox;
+    this.oImgBox = oImgBox;
 
     //属性的默认值：
     let defaultObj = {
@@ -152,8 +154,7 @@ function Mirror(oBox, obj) {
         opacity: 0.3,
         left: 0, //镜子的位置
         top: 0,
-        img:"img/img1.jpg",
-        imgs:["img/img1.jpg","img/img2.jpg"]
+        imgs:"img/img1.jpg"
     }
 
     // 先把传入的数据（obj）赋给defaultObj; 这是最终的对象的属性值；
@@ -173,40 +174,12 @@ function Mirror(oBox, obj) {
 // 方法
 // 1、创建dom的方法（就是HTML和CSS代码）
 Mirror.prototype.createDom = function () {
-    let htmlStr="";
-    // 创建下面的小图列表
-    // 1）、创建 图片的盒子
-    htmlStr += `<ul style="
-        position:absolute;
-        left:0;
-        top:${this.oBox.offsetHeight+10}px; 
-        width: ${this.oBox.offsetWidth}px; 
-        height: 90px ;
-        border:1px solid black;
-    ">`;
+    let htmlStr=this.oBox.innerHTML;
 
-    // 2）、通过循环创li(有几张图片，就创建几个li)
-    for(let i=0;i<this.imgs.length;i++){
-        htmlStr += `
-            <li style="
-                    float: left;
-                    margin-left: 5px;
-                    width: ${this.oBox.offsetWidth/this.imgs.length-10}px;
-                    height: 90px;                
-            ">
-                <img style="
-                            width: 100%;
-                            height: 100%;
-                " src="${this.imgs[i]}">
-            </li>
-        `;
-    }
-    htmlStr += "</ul>";
-    
     // 1、放大镜的html代码；
     htmlStr += `
         <div style="
-                    position: absolute;
+                    position: relative;
                     left: ${this.left}px;
                     top: ${this.top}px;
                     width: ${this.width}px;
@@ -222,9 +195,9 @@ Mirror.prototype.createDom = function () {
     let boxHeight = this.oBox.offsetHeight;
     htmlStr += `
         <div style="
-                    position: absolute;
+                    position: relative;
                     left: ${boxWidth+20}px;
-                    top: 0;
+                    top: -116px;
                     width: ${this.width*this.multiple}px;
                     height: ${this.height*this.multiple}px;
                     border: 1px solid pink;
@@ -238,30 +211,30 @@ Mirror.prototype.createDom = function () {
     
     // 把拼接好的html字符串放到盒子里
     this.oBox.innerHTML = htmlStr;
+    console.log(this.oBox);
+    
 
 }
 
 
 // 2、绑定事件（给盒子绑定onmousemove事件）
 Mirror.prototype.addEvent = function(){
-        //放大镜： 倒数第二个孩子
-        console.log(this);
-        console.log(this.oBox);
-        console.log(this.oBox.lastElementChild);
-        console.log(this.oBox.lastElementChild.previousElementSibling);
+    //放大镜： 倒数第二个孩子
 
-        
-        let oMirrorBox = this.oBox.lastElementChild.previousElementSibling;
+    console.log(this.oBox);
+    console.log(this.oBox.lastElementChild);
+    let oMirrorBox = this.oBox.lastElementChild.previousElementSibling;
+    
     // 可视div：倒数第一个孩子
     let oShowBox = this.oBox.lastElementChild;
 
     // 1、给大盒子增加事件
-    this.oBox.onmouseover = function(){
+    this.oBox.onmouseenter = function(){
         oMirrorBox.style.display = "block";
         oShowBox.style.display = "block";
     }
     
-    this.oBox.onmouseout = function(){
+    this.oBox.onmouseleave = function(){
         oMirrorBox.style.display = "none";
         oShowBox.style.display = "none";
     }
@@ -303,23 +276,17 @@ Mirror.prototype.addEvent = function(){
         oShowBox.style.backgroundPosition = `-${this.left * this.multiple}px -${this.top * this.multiple}px`;
     }
 
-    // 3、给下面的每个li增加onmouseover事件
-
-    let oLis = this.oBox.firstElementChild.children; //
-    for(let i=0;i<oLis.length;i++){
-        oLis[i].onmouseover = (event)=>{
-            this.img = oLis[i].firstElementChild.src;
+    // 3、给下面的图片列表增加事件
+    let oDivs = this.oImgBox.children;
+    for(let i=0;i<oDivs.length;i++){
+        // 
+        oDivs[i].onmouseover = ()=>{
+            // 改变img属性的值
+            this.img = oDivs[i].firstElementChild.firstElementChild.src
+            // 大盒子背景图片
             this.oBox.style.backgroundImage = `url(${this.img})`;
+            // 可视部分的背景图片
             oShowBox.style.backgroundImage = `url(${this.img})`;
-            // 阻止事件冒泡
-            let e = event || window.event;
-            e.stopPropagation();
         }
-        oLis[i].onmousemove = (event)=>{
-                // 阻止事件冒泡
-                let e = event || window.event;
-                e.stopPropagation();
-        } 
     }
-
-}
+} 
