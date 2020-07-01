@@ -227,5 +227,30 @@ $(function(){
         );
     });
 
+
 //------------
+
+    // 一、获取用户名（在cookie中获取）
+    function getUserName(){
+        let username = getCookie('username')
+
+        if (username) {
+            $('#username1').html(username + '欢迎你')
+            $('#zhuxiao').css({"display":"inline-block"})
+            $('#dl').css({"display":"none"})
+        }else{
+            $('#zhuxiao').css({"display":"none"})
+            $('#dl').css({"display":"inline-block"})
+        }
+        // 2、给注销按钮绑定事件
+        $('#zhuxiao').click(function(){
+            // 1、删除cookie
+            removeCookie("username");
+            $('#username1').css({"display":"none"})
+            $('#zhuxiao').css({"display":"none"})
+            $('#dl').css({"display":"inline-block"})
+        })
+    }
+    getUserName()
+
 })

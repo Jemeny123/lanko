@@ -19,12 +19,40 @@ nav{
 }
 .nav-wrap ul{
     margin-left: 55px;
+    position: relative;
 }
 .nav-wrap ul li a{
     display: inline-block;
     color: white;
     line-height: 60px;
     padding: 0 25px;
+}
+.nav-wrap .xlcd{
+    display: none;
+    width: 1367px;
+    position: absolute;
+    left: -223px;
+    background: #ffe2f1;
+    z-index: 1;
+    font-size: 12px;
+    padding-left: 175px;
+    padding-bottom: 20px;
+}
+.nav-wrap .xlcd ul{
+    width: 170px;
+}
+.nav-wrap .xlcd ul li a{
+    margin-bottom: 18px;
+    line-height: 12px;
+    padding: 0;
+}
+.nav-wrap .xlcd ul li:nth-of-type(1) a{
+    margin: 43px 0 35px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.nav-wrap .xlcd a{
+    color: #333333;
 }
 .nav-wrap .nav-r a{
     display: inline-block;

@@ -1,5 +1,26 @@
-function getData(){
+// 一、获取用户名（在cookie中获取）
+function getUserName(){
+    let username = getCookie('username')
 
+    if (username) {
+        $('#username1').html(username + '欢迎你')
+        $('#zhuxiao').css({"display":"inline-block"})
+        $('#dl').css({"display":"none"})
+    }else{
+        $('#zhuxiao').css({"display":"none"})
+        $('#dl').css({"display":"inline-block"})
+    }
+    // 2、给注销按钮绑定事件
+    $('#zhuxiao').click(function(){
+        // 1、删除cookie
+        removeCookie("username");
+        $('#username1').css({"display":"none"})
+        $('#zhuxiao').css({"display":"none"})
+        $('#dl').css({"display":"inline-block"})
+    })
+}
+
+function getData(){
     // 获取地址栏上的商品编号
     // location.search: 获取地址栏中 文件名后面的字符串，即问号后面的东西
     // http://localhost/nz2001taobao/goodsdetail.html?goodsId=01001
@@ -89,12 +110,12 @@ function showData(data){
     console.log(oBox);
     console.log(oImgBox);
     let m1 = new Mirror(oBox,oImgBox,{
-        width:100,
         img:`${data.goodsImg}`
     });
 }
 
 $(function(){
+    getUserName()
     getData(addEvent);
 })
 
@@ -147,11 +168,11 @@ function Mirror(oBox,oImgBox, obj) {
 
     //属性的默认值：
     let defaultObj = {
-        width: 80,
-        height: 120,
+        width: 150,
+        height: 150,
         multiple: 3,
         color: "red",
-        opacity: 0.3,
+        opacity: 0.1,
         left: 0, //镜子的位置
         top: 0,
         imgs:"img/img1.jpg"
@@ -197,7 +218,7 @@ Mirror.prototype.createDom = function () {
         <div style="
                     position: relative;
                     left: ${boxWidth+20}px;
-                    top: -116px;
+                    top: -140px;
                     width: ${this.width*this.multiple}px;
                     height: ${this.height*this.multiple}px;
                     border: 1px solid pink;
@@ -290,3 +311,8 @@ Mirror.prototype.addEvent = function(){
         }
     }
 } 
+
+//二级菜单
+$(".first > li").hover(function() {
+    $(this).children(".xlcd").stop().slideToggle(200);
+})
