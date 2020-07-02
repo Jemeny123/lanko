@@ -13,7 +13,7 @@
 		//die("连接失败".mysql_error());
 		echo "0";	
 	}	
-	mysql_select_db("dianshang2",$con);
+	mysql_select_db("dianshang",$con);
 	
 	//2、执行SQL语句
 	$sqlStr = "insert into vip(username,userPass)

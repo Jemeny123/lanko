@@ -1,27 +1,29 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
+	$vipName   = $_REQUEST['vipName'];
 	
-	$goodsId   = $_REQUEST['goodsId'];
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
 	$conn = mysql_connect("localhost","root","root");
 	
 	//2）、选择数据库（找目的地）
-	if(!mysql_select_db("dianshang2",$conn)){
+	if(!mysql_select_db("dianshang",$conn)){
 		die("数据库选择失败".mysql_error());
-	}
+	};
 	
 	//3）、传输数据（过桥）
-
-	$sqlstr = "select gi.*,gt.goodstype
-		from goodsInfo as gi,goodstype as gt
-		where goodsId='$goodsId'
-		and gt.typeId = gi.typeId ";
+	$sqlstr = "select *
+				from goodsInfo g,shoppingCart s,goodstype as gt
+			   where g.goodsId = s.goodsId
+			     and gt.typeId = g.typeId   
+			     and s.vipName = '$vipName'";
 
 	$result = mysql_query($sqlstr,$conn);//执行查询的sql语句后，有返回值，返回的是查询结果
+		
 	if(!$result){
-		die("获取数据失败".mysql_error());
-	}		
+		die("SQL语句执行失败".mysql_error());
+	}
+			
 	//查询列数
 	 $query_cols = mysql_num_fields($result);
 	 //echo "列数：".$query_cols;
@@ -29,14 +31,15 @@
     $query_num =mysql_num_rows($result);
     //echo "行数：".$query_num;
 	
-	$str="";
+	$str="[";
 	
 	$query_row = mysql_fetch_array($result);//游标下移,拿出结果集中的某一行，返回值是拿到的行；
+	while($query_row){
 		$str = $str.'{"goodsId":"'.$query_row[0].'",
 		"goodsName":"'.$query_row[1].'",
-		"goodsType":"'.$query_row[20].'",
+		"goodsType":"'.$query_row[24].'",
 		"goodsPrice":"'.$query_row[3].'",
-		"goodsCount":"'.$query_row[4].'",
+		"goodsCount":"'.$query_row[22].'",
 		"goodsDesc":"'.$query_row[5].'",
 		"goodsImg":"'.$query_row[6].'",
 		"beiyong1":"'.$query_row[7].'",
@@ -53,6 +56,14 @@
 		"beiyong12":"'.$query_row[18].'",
 		"beiyong13":"'.$query_row[19].'"
 		}';	
+		
+		
+		$query_row = mysql_fetch_array($result);
+		if($query_row){
+			$str = $str.",";
+		}
+	}
+	$str = $str."]";
 	//4、关闭数据库
 	mysql_close($conn);
 	

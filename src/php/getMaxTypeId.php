@@ -6,7 +6,7 @@
 	$conn = mysql_connect("localhost","root","root");
 	
 	//2）、选择数据库（找目的地）
-	if(!mysql_select_db("dianshang",$conn)){
+	if(!mysql_select_db("dianshang2",$conn)){
 		die("数据库选择失败".mysql_error());
 	}
 	

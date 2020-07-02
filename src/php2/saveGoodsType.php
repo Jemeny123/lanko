@@ -11,7 +11,7 @@
 	}
 	
 	//2）、选择数据库（找目的地）
-	if(!mysql_select_db("dianshang2",$conn)){
+	if(!mysql_select_db("dianshang",$conn)){
 		die("数据库选择失败".mysql_error());
 	};
 	

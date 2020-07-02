@@ -6,7 +6,7 @@
 
     // 二、处理（连接数据库，进行查询）
     // 1、连接数据库
-    $conn = mysqli_connect("localhost","root","root","dianshang2");
+    $conn = mysqli_connect("localhost","root","root","dianshang");
 
     // 2、执行sql语句
     // 执行查询语句的返回值是个表格
