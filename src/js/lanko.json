@@ -1,0 +1,184 @@
+[
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935322963279753_460X460.jpg?version=20200623223328916",
+        "beiyong1": "50ml",
+        "goodsName": "第二代小黑瓶",
+        "beiyong2": "Advanced Génifique Valueset",
+        "goodsPrice": "¥ 1080"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935322665474488_460X460.jpg?version=20200623223328916",
+        "beiyong1": "400 ml",
+        "goodsName": "口碑粉水",
+        "beiyong2": "Tonique Confort Valueset",
+        "goodsPrice": "¥ 420"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321540901421_460X460.jpg?version=20200623223328916",
+        "beiyong1": "20ml",
+        "goodsName": "大眼精华",
+        "beiyong2": "Génifique Yeux Light-Pearl Valueset",
+        "goodsPrice": "¥ 680"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935322488644471_460X460.jpg?version=20200623223328916",
+        "beiyong1": "15ml",
+        "goodsName": "发光眼霜",
+        "beiyong2": "Génifique Yeux Valueset",
+        "goodsPrice": "¥ 520"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321272784754_460X460.jpg?version=20200623223328916",
+        "beiyong1": "50ml",
+        "goodsName": "雪花霜",
+        "beiyong2": "Rénergie Multi-Lift Ultra Valueset",
+        "goodsPrice": "¥ 895"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321421289155_460X460.jpg?version=20200623223328916",
+        "beiyong1": "50ml",
+        "goodsName": "水份缘凝霜",
+        "beiyong2": "Hydra Zen Valueset",
+        "goodsPrice": "¥ 575"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321981862686_460X460.jpg?version=20200623223328916",
+        "beiyong1": "20ml",
+        "goodsName": "菁纯眼霜",
+        "beiyong2": "Absolue Revitalizing Eye Cream Valueset",
+        "goodsPrice": "¥ 1080"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935319565373500_460X460.jpg?version=20200623223328916",
+        "beiyong1": "30ml 轻盈版",
+        "goodsName": "菁纯面霜",
+        "beiyong2": "Absolue Soft Cream Valueset",
+        "goodsPrice": "¥ 1380"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321332349194_460X460.jpg?version=20200623223328916",
+        "beiyong1": "150 ml",
+        "goodsName": "兰蔻极光水",
+        "beiyong2": "Clarifique Dual Essence Valueset",
+        "goodsPrice": "¥ 790"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935322252881818_460X460.jpg?version=20200623223328916",
+        "beiyong1": "15ml",
+        "goodsName": "塑颜眼霜",
+        "beiyong2": "Rénergie Yeux Multi-Lift Valueset",
+        "goodsPrice": "¥ 560"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321025419098_460X460.jpg?version=20200623223328916",
+        "beiyong1": "50ml",
+        "goodsName": "水份缘乳液",
+        "beiyong2": "Hydra Zen Moisturizer",
+        "goodsPrice": "¥ 490"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935320646269091_460X460.jpg?version=20200623223328916",
+        "beiyong1": "125ml",
+        "goodsName": "全新极光洁面",
+        "beiyong2": "Clarifique Pore Refining Cleansing Foam",
+        "goodsPrice": "¥ 350"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321207071708_460X460.jpg?version=20200623223328916",
+        "beiyong1": "30ml",
+        "goodsName": "全新极光精华",
+        "beiyong2": "CLARIFIQUE SPOT ERASER",
+        "goodsPrice": "¥ 830"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935319643757286_460X460.jpg?version=20200623223328916",
+        "beiyong1": "50ml",
+        "goodsName": "全新极光5号霜",
+        "beiyong2": "Clarifique Brightening Plumping Milky Cream",
+        "goodsPrice": "¥ 740"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935322323704140_460X460.jpg?version=20200623223328916",
+        "beiyong1": "30ml",
+        "goodsName": "小白管防晒",
+        "beiyong2": "UV Expert Aqua Gel Set",
+        "goodsPrice": "¥ 480"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935323248964776_460X460.jpg?version=20200623223328916",
+        "beiyong1": "30ml",
+        "goodsName": "菁纯防晒乳",
+        "beiyong2": "Absolue Precious Cells UV Valueset",
+        "goodsPrice": "¥ 890"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935319920605980_460X460.jpg?version=20200623223328916",
+        "beiyong1": "150ml",
+        "goodsName": "菁纯精萃水",
+        "beiyong2": "Absolue Rose 80 Valueset",
+        "goodsPrice": "¥ 860"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935323100151374_460X460.jpg?version=20200623223328916",
+        "beiyong1": "套装",
+        "goodsName": "塑颜凝露水",
+        "beiyong2": "Renergie Multi-Lift Gel-In-Lotion Valueset",
+        "goodsPrice": "¥ 560"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321744578914_460X460.jpg?version=20200623223328916",
+        "beiyong1": "套装",
+        "goodsName": "塑颜水+雪花霜",
+        "beiyong2": "Rénergie Multi-Lift Ultra Cream & Gel-In-Lotion Duo",
+        "goodsPrice": "¥ 1455"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321644684951_460X460.jpg?version=20200623223328916",
+        "beiyong1": "套装",
+        "goodsName": "口碑粉水+水份缘凝霜",
+        "beiyong2": "Tonique Confort & Hydra Zen Facial Duo",
+        "goodsPrice": "¥ 995"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321659933619_460X460.jpg?version=20200623223328916",
+        "beiyong1": "套装（小黑&安瓶）",
+        "goodsName": "第二代「小黑瓶」&安瓶套装",
+        "beiyong2": "Advanced Génifique Sensitive Duo",
+        "goodsPrice": "¥ 1450"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935319483066438_460X460.jpg?version=20200623223328916",
+        "beiyong1": "套装",
+        "goodsName": "口碑粉水+第二代小黑瓶",
+        "beiyong2": "Advanced Génifique & Tonique Confort Facial Duo",
+        "goodsPrice": "¥ 1180"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321537183960_460X460.jpg?version=20200623223328916",
+        "beiyong1": "极光水150ml+小黑瓶30ml",
+        "goodsName": "极光嫩肤1+1",
+        "beiyong2": "Clarifique & Advanced Génifique Facial Duo",
+        "goodsPrice": "¥ 1550"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935320098757998_460X460.jpg?version=20200623223328916",
+        "beiyong1": "轻盈版30ml+菁纯精粹水150ml",
+        "goodsName": "菁纯面霜+菁纯精萃水",
+        "beiyong2": "Absolue Rose 80 & Abolue Precious Cells Cream Set",
+        "goodsPrice": "¥ 2240"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935322437489866_460X460.jpg?version=20200623223328916",
+        "beiyong1": "套装",
+        "goodsName": "大眼精华+发光眼霜",
+        "beiyong2": "Génifique Yeux Ilumminating & Activating Duo",
+        "goodsPrice": "¥ 1200"
+    },
+    {
+        "goodsImg": "https://res.lancome.com.cn/resources/2020/6/30/15935321134795306_460X460.jpg?version=20200623223328916",
+        "beiyong1": "极光水150ml+极光面霜50ml",
+        "goodsName": "全新极光1+1",
+        "beiyong2": "Clarifique Dual Essence&Clarifique Brightening Plumping Milky Cream",
+        "goodsPrice": "¥ 1530"
+    }
+]
